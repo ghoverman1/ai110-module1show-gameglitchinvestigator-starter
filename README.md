@@ -33,11 +33,14 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+User selects "Normal" difficulty and the game starts with a range of 1 to 50
+User enters a guess of 25 → Game returns "Go Higher"
+User enters a guess of 38 → Game returns "Go Lower"
+User enters a guess of 31 → Game returns "Go Higher"
+User enters a guess of 35 → Game returns "Correct!"
+Attempt counter updates accurately after each guess
+Score is recorded and displayed on screen
+User clicks New Game and the board resets cleanly for a fresh round
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
