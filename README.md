@@ -26,8 +26,31 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+there really is no point other than to waste time guessing a random number
 - [ ] Detail which bugs you found.
+Inverted Higher/Lower Hints - When a guess was lower than the secret number the game told the user to go lower, and when the guess was higher it told them to go higher. The condition logic inside the check_guess function had the comparisons flipped.
+
+New Game Button Not Resetting the UI - Clicking New Game generated a new secret number in the background but the screen stayed frozen on the previous game state. The input field also became unresponsive, making it impossible to continue playing without refreshing the page.
+
+Attempt Counter Going Negative - When switching between difficulty levels mid-game the attempt counter was not being properly reset, causing it to continue counting down past zero into negative numbers.
+
+Difficulty Switch Not Updating Secret Number or Text - Changing the difficulty level mid-session left the original secret number in place even though the range and attempt limit changed. The welcome text displaying the number range also stayed stuck on the previous difficulty's values.
+
+Enter Key Not Submitting Guess - Pressing Enter after typing a number into the input field did nothing. The only way to submit a guess was by clicking the Submit Guess button with the mouse.
+
+Attempt Counter Starting at 1 - Before any guess had been made the attempt counter already displayed 1, when it should have started at 0 and only incremented after an actual guess was submitted.
 - [ ] Explain what fixes you applied.
+Inverted Higher/Lower Hints - Went into the check_guess function in logic_utils.py and swapped the conditions so that when the guess is less than the secret number it returns "Go Higher" and when the guess is greater it returns "Go Lower".
+
+New Game Button Not Resetting the UI - Fixed the session state reset logic so that when New Game is clicked it properly clears and reinitialises all the relevant session variables, which forces the UI to re-render with a fresh game state and re-enables the input field.
+
+Attempt Counter Going Negative - Added a proper reset of the attempt counter whenever the difficulty level is changed so it starts fresh from the correct limit rather than continuing to decrement from wherever it left off.
+
+Difficulty Switch Not Updating Secret Number or Text - Updated the difficulty change handler to generate a brand new secret number within the new range whenever the difficulty is switched and also made sure the hint text on screen pulls the updated range values so it reflects the correct difficulty.
+
+Enter Key Not Submitting Guess - Added a keyboard event listener so that pressing Enter inside the input field triggers the same submission logic as clicking the Submit Guess button.
+
+Attempt Counter Starting at 1 - Changed the initial value of the attempt counter in the session state from 1 to 0 so it correctly starts at zero before any guess has been made.
 
 ## 📸 Demo Walkthrough
 
