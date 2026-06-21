@@ -38,8 +38,15 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  For this project, I used Claude as my primary AI tool throughout development. I used the Plan mode, which let me connect it directly to my codebase so it could read through the files and pinpoint issues based on the bugs I described. When making changes and Chat mode when I needed a more focused explanation of specific functions or logic I wasn't fully grasping.
+  
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  A good example was the bug in which the attempt counter started at 1 before any guesses had been made. I described the issue to Claude, and it pointed out that the counter was being initialized at the wrong value in the session state setup. I checked the relevant section of code and confirmed that the initial value was indeed set to 1 rather than 0, and after updating it the counter behaved correctly from the start.
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+When I asked Claude to help implement a fix, it placed the new code directly inside app.py when it should have been written in the separate logic file instead. This went against the structure of the project, where app.py handles routing and the logic file is meant to contain the game mechanics. I caught this by reviewing where similar functions were already defined and noticed the AI had ignored the existing separation of concerns. I had to manually move the code into the correct file and adjust the import to get everything working properly.
+
+
 
 ---
 
