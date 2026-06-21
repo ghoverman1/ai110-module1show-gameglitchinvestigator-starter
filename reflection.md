@@ -62,7 +62,7 @@ When I asked Claude to help implement a fix, it placed the new code directly ins
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-
+Streamlit is like an over-eager chef who completely wipes the kitchen clean and throws away all active pots and pans every single time you change your mind about an ingredient. Because of this constant resetting, the chef instantly suffers from "amnesia" and forgets what you ordered or what steps they just completed. To fix this, Session State acts like a secure holding tray on the counter where the chef can safely set aside your cooked ingredients before wiping the kitchen clean. When the kitchen resets, the chef simply grabs your food right back off that holding tray so they can finish your meal without starting from scratch.
 ---
 
 ## 5. Looking ahead: your developer habits
