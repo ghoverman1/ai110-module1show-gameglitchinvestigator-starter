@@ -29,9 +29,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| 13| go lower | go higher | none |
+|switched game mode | new game is created| #of attemps change| none|
+| new game | attempts to 0 and a new # history of guesses cleared| nothing happens | |
 
 ---
 
