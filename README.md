@@ -69,11 +69,19 @@ User clicks New Game and the board resets cleanly for a fresh round
 
 ## 🧪 Test Results
 
-```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
-```
+eorgehoverman@Georges-MacBook-Pro ai110-module1show-gameglitchinvestigator-starter % pytest
+========================================================================== test session starts ===========================================================================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/georgehoverman/ai110-module1show-gameglitchinvestigator-starter
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.0
+collected 3 items                                                                                                                                                        
+
+tests/test_game_logic.py ...                                                                                                                                       [100%]
+
+=========================================================================== 3 passed in 0.01s ============================================================================
+georgehoverman@Georges-MacBook-Pro ai110-module1show-gameglitchinvestigator-starter % 
 
 ## 🚀 Stretch Features
 
