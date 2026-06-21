@@ -70,6 +70,10 @@ Streamlit is like an over-eager chef who completely wipes the kitchen clean and 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+  One habit I want to carry forward is writing tests early before the bugs pile up. Having tests in place meant I could make a fix and immediately confirm it worked rather than just guessing, and that saved a lot of back and forth time. Also doing the project in advance. 
+
+  
 - What is one thing you would do differently next time you work with AI on a coding task?
+One thing I would do differently is give the AI more specific context upfront instead of just describing the symptom. A lot of the unhelpful suggestions I got were because I wasn't giving it enough information about the project structure, so the AI was basically guessing just as much as I was.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+This project made me realise that AI code needs to actually be read and understood before you use it, because it can produce something that looks completely fine but is either solving the wrong problem or quietly breaking something else. You have to know enough about the code yourself to catch those mistakes, otherwise you're just swapping one bug for another.
