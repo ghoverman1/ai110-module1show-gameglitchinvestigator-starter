@@ -5,8 +5,23 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  The game launched easily in the terminal; it was a number-guessing game that contained three difficulty levels. The website also has a developer section that assists with debugging 
 - List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
+1. The higher/lower hints were reversed — lower showed when it should say higher and vice versa.
+
+2. The New Game button didn't reset the UI or re-enable the input field, even though a new number was generated.
+
+3. Switching difficulty mid-game caused the attempt counter to go negative.
+
+4. Changing difficulty didn't update the secret number or the "Guess a number between" text on screen.
+
+5. Normal (1–50) and Hard (1–100) would make more sense difficulty-wise than the current setup.
+
+6. Pressing Enter had no effect; players had to manually click Submit Guess each time.
+
+7. The attempt counter starts at 1 instead of 0 before any guess is made.
+
+
 
 **Bug Reproduction Log**
 
