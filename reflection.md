@@ -53,10 +53,12 @@ When I asked Claude to help implement a fix, it placed the new code directly ins
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+  My approach was to deliberately repeat whatever action triggered the bug originally and see if the problem still occurred after my changes. If the same steps no longer produced the broken behaviour, I was confident the fix had worked. 
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+When I first tried running the tests in test_game_logic.py, I immediately hit an ImportError — the module couldn't find logic_utils, which meant the test file wasn't able to import the check_guess function at all. This told me that the test wasn't being run from the correct directory, so Python had no idea where to look for the logic_utils module. Once I fixed the path issue and ran the tests again, they executed properly and I was able to see which parts of the game logic were passing and which were failing, giving me a much clearer picture of where the bugs actually lived in the code.
 - Did AI help you design or understand any tests? How?
-
+Yes, when I was writing tests for the check_guess function I asked Claude what scenarios I should actually be covering. I had only written a basic test for a correct guess and wasn't thinking much beyond that. It pointed out that I should also be testing when the guess is too high and when it's too low as separate cases, which sounds obvious in hindsight but I hadn't considered structuring them that way. 
 ---
 
 ## 4. What did you learn about Streamlit and state?
